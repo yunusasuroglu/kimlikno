@@ -3,6 +3,12 @@
     "description": "T.C. Kimlik Numarası doğrulama paketi",
     "type": "library",
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/yunusasuroglu/kimlikno"
+        }
+    ],
     "authors": [
         {
             "name": "Yunus Emre Aşuroğlu",
