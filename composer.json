@@ -1,0 +1,19 @@
+{
+    "name": "kullaniciadi/tckimlik",
+    "description": "T.C. Kimlik Numarası doğrulama paketi",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adınız",
+            "email": "email@example.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TCKimlik\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
