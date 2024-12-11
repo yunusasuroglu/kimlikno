@@ -10,7 +10,7 @@ class KimlikNo
      * @param  string  $tcKimlikNo
      * @return bool
      */
-    public static function doğrula(string $tcKimlikNo): bool
+    public static function verification(string $tcKimlikNo): bool
     {
         if (strlen($tcKimlikNo) !== 11) {
             return false;
