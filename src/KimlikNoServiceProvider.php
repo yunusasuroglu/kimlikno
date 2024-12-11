@@ -1,20 +1,32 @@
 <?php
 
-namespace TCKimlik;
+namespace yunusasuroglu\KimlikNo;
 
 use Illuminate\Support\ServiceProvider;
 
-class TCKimlikServiceProvider extends ServiceProvider
+class KimlikNoServiceProvider extends ServiceProvider
 {
-    public function register()
+    /**
+     * Paket yüklenmeden önce yapılacak işlemler.
+     *
+     * @return void
+     */
+    public function boot(): void
     {
-        $this->app->singleton('tckimlik', function () {
-            return new TCKimlik();
-        });
+        // Facade kullanımını sağlamak için facade kaydını yapıyoruz.
+        $this->app->singleton(KimlikNo::class, fn($app) => new KimlikNo());
+
+        // KimlikNo facade'ini tanımlıyoruz.
+        $this->app->alias(KimlikNo::class, 'kimlikno');
     }
 
-    public function boot()
+    /**
+     * Paket servis sağlayıcısını kaydetme.
+     *
+     * @return void
+     */
+    public function register(): void
     {
-        // Publish config or migrations if needed
+        // Paket için gerekli olan ekleme işlemleri burada yapılabilir.
     }
 }
