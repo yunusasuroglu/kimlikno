@@ -15,19 +15,32 @@ composer require yunusasuroglu/kimlikno
 
 Paketin sağladığı doğrulama işlevini aşağıdaki gibi kullanabilirsiniz:
 
-### **1. Servis Kullanımı**
+### **1. Laravel Kullanımı**
+
+1. Servis sağlayıcınızı `config/app.php` dosyasına ekleyin:
 
 ```php
-require_once 'vendor/autoload.php';
+'providers' => [
+    TCKimlik\KimlikNoServiceProvider::class,
+];
+```
 
-use TCKimlik\KimlikNo;
+2. Facade ekleyin:
 
-$kimlikNo = new KimlikNo();
+```php
+'aliases' => [
+    'KimlikNo' => TCKimlik\Facades\KimlikNo::class,
+];
+```
 
-// Geçerli bir T.C. kimlik numarası
+3. Kullanımı:
+
+```php
+use KimlikNo;
+
 $tcNo = "12345678901";
 
-if ($kimlikNo->dogrula($tcNo)) {
+if (KimlikNo::dogrula($tcNo)) {
     echo "T.C. Kimlik Numarası geçerlidir.";
 } else {
     echo "T.C. Kimlik Numarası geçerli değildir.";
