@@ -21,7 +21,7 @@ Paketin sağladığı doğrulama işlevini aşağıdaki gibi kullanabilirsiniz:
 
 ```php
 'providers' => [
-    TCKimlik\TCKimlikServiceProvider::class,
+    yunusasuroglu\KimlikNo\KimlikNoServiceProvider::class,
 ];
 ```
 
@@ -29,14 +29,14 @@ Paketin sağladığı doğrulama işlevini aşağıdaki gibi kullanabilirsiniz:
 
 ```php
 'aliases' => [
-    'KimlikNo' => TCKimlik\Facades\KimlikNo::class,
+    'KimlikNo' => yunusasuroglu\KimlikNo\Facades\KimlikNo::class,
 ];
 ```
 
 3. Kullanımı:
 
 ```php
-use KimlikNo;
+use yunusasuroglu\KimlikNo\KimlikNo;
 
 $tcNo = "12345678901";
 
@@ -49,7 +49,7 @@ if (KimlikNo::dogrula($tcNo)) {
 
 ## Gereksinimler
 
-- PHP 7.4 veya üstü
+- PHP 8.0 veya üstü
 - Composer
 
 ## Katkıda Bulunma
