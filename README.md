@@ -21,7 +21,7 @@ Paketin sağladığı doğrulama işlevini aşağıdaki gibi kullanabilirsiniz:
 
 ```php
 'providers' => [
-    TCKimlik\KimlikNoServiceProvider::class,
+    TCKimlik\TCKimlikServiceProvider::class,
 ];
 ```
 
