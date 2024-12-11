@@ -7,26 +7,27 @@ use Illuminate\Support\ServiceProvider;
 class KimlikNoServiceProvider extends ServiceProvider
 {
     /**
-     * Paket yüklenmeden önce yapılacak işlemler.
+     * Steps to be taken before installing the package.
      *
      * @return void
      */
     public function boot(): void
     {
-        // Facade kullanımını sağlamak için facade kaydını yapıyoruz.
         $this->app->singleton(KimlikNo::class, fn($app) => new KimlikNo());
 
-        // KimlikNo facade'ini tanımlıyoruz.
-        $this->app->alias(KimlikNo::class, 'kimlikno');
+        $this->app->alias(KimlikNo::class, 'KimlikNo');
     }
 
     /**
-     * Paket servis sağlayıcısını kaydetme.
+     * Register a package service provider.
      *
      * @return void
      */
-    public function register(): void
+    public function register()
     {
-        // Paket için gerekli olan ekleme işlemleri burada yapılabilir.
+        $this->app->singleton('kimlikno', function ($app) {
+            return new KimlikNo(); // KimlikNo sınıfını buradan çağırıyoruz
+        });
     }
+
 }
