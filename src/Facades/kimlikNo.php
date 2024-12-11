@@ -7,12 +7,12 @@ use Illuminate\Support\Facades\Facade;
 class KimlikNo extends Facade
 {
     /**
-     * Facade için sağlanan servis adını döndürür.
+     * Returns the service name provided for Facade.
      *
      * @return string
      */
     protected static function getFacadeAccessor(): string
     {
-        return 'kimlikno';
+        return 'KimlikNo';
     }
 }
