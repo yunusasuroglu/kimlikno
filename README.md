@@ -1,23 +1,23 @@
-# T.C. Kimlik Numarası Doğrulama Paketi
+# Republic of Turkey Identity Number Verification Package
 
-## Açıklama
-Bu paket, T.C. Kimlik Numarası doğrulama işlemlerini kolaylaştırmak amacıyla geliştirilmiştir.
+## Description
+This package was developed to facilitate the verification process of the Turkish Republic Identity Number.
 
-## Kurulum
+## Setup
 
-Paketinizi projeye eklemek için aşağıdaki komutu çalıştırın:
+Run the following command to add your package to the project:
 
 ```bash
 composer require yunusasuroglu/kimlikno
 ```
 
-## Kullanım
+## Use
 
-Paketin sağladığı doğrulama işlevini aşağıdaki gibi kullanabilirsiniz:
+You can use the verification functionality provided by the package as follows:
 
-### **1. Laravel Kullanımı**
+### **1. Using Laravel**
 
-1. Servis sağlayıcınızı `config/app.php` dosyasına ekleyin:
+1. Add your service provider to `config/app.php` file:
 
 ```php
 'providers' => [
@@ -25,7 +25,7 @@ Paketin sağladığı doğrulama işlevini aşağıdaki gibi kullanabilirsiniz:
 ];
 ```
 
-2. Facade ekleyin:
+2. Facade Add:
 
 ```php
 'aliases' => [
@@ -33,7 +33,7 @@ Paketin sağladığı doğrulama işlevini aşağıdaki gibi kullanabilirsiniz:
 ];
 ```
 
-3. Kullanımı:
+3. Use:
 
 ```php
 use yunusasuroglu\KimlikNo\KimlikNo;
@@ -41,18 +41,18 @@ use yunusasuroglu\KimlikNo\KimlikNo;
 $tcNo = "12345678901";
 
 if (KimlikNo::dogrula($tcNo)) {
-    echo "T.C. Kimlik Numarası geçerlidir.";
+    echo "Turkish Republic Identity Number is valid.";
 } else {
-    echo "T.C. Kimlik Numarası geçerli değildir.";
+    echo "Turkish Republic Identity Number is not valid.";
 }
 ```
 
-## Gereksinimler
+## Requirements
 
-- PHP 8.0 veya üstü
+- PHP 8.0 or above
 - Composer
 
-## Katkıda Bulunma
+## Contribute
 
 1. Bu projeyi fork'layın.
 2. Yeni bir özellik dalı (`feature/ozellik-adi`) oluşturun.
