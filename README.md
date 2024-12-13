@@ -54,12 +54,12 @@ if (KimlikNo::dogrula($tcNo)) {
 
 ## Contribute
 
-1. Bu projeyi fork'layın.
-2. Yeni bir özellik dalı (`feature/ozellik-adi`) oluşturun.
-3. Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik eklendi'`).
-4. Dalı master’a push edin (`git push origin feature/ozellik-adi`).
-5. Bir Pull Request açın.
+1. Fork this project.
+2. Create a new feature branch (`feature/feature-adi`).
+3. Commit your changes (`git commit -m 'New feature added'`).
+4. Push the branch to master (`git push origin feature/feature-adi`).
+5. Open a Pull Request.
 
-## Lisans
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+## Licence
+This project is licensed under the [MIT License](LICENSE).
 
